@@ -1,0 +1,9 @@
+Nova IPTV original application code, created October 2026.
+Includes AndroidX Media3 and AndroidX libraries from the Android Open Source Project under Apache License 2.0.
+Includes Guava (Google) under Apache License 2.0, Kotlin standard library (JetBrains) under Apache License 2.0, and annotations under their respective open source licenses.
+Dependency coordinates and licenses are available in the source project and each dependency's Maven POM.
+Media3 source: https://github.com/androidx/media
+AndroidX source: https://android.googlesource.com/platform/frameworks/support/
+Guava source: https://github.com/google/guava
+Kotlin source: https://github.com/JetBrains/kotlin
+The demo clip is a generated test pattern and sine-wave tone; no TV subscription content is included.

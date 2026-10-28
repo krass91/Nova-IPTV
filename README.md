@@ -1,47 +1,36 @@
-# Nova IPTV APK - Reverse Engineering Analysis
+# Nova IPTV
 
-## Overview
-**Nova-IPTV** is an Android application package (APK) for IPTV streaming. This repository contains a reverse engineering analysis of the APK file.
+Хранилище на Android приложението **Nova IPTV**, съдържащо оригиналния APK файл, възстановения чрез декомпилация Java код и ресурсите на приложението.
 
-## APK Details
-- **Filename**: Nova-IPTV (1)1.apk
-- **File size**: ~9.5 MB
-- **Package type**: Android Package Kit (APK)
-- **Analysis type**: Reverse engineering using APK decompilation techniques
+## Данни за приложението
 
-## Extracted Information
-From the AndroidManifest.xml analysis:
-- **App component activities** include TV-related UI components
-- **Broadcast receivers** for system events
-- **Services** for media playback
-- **Permission requirements** for IPTV streaming operations
+- Име: Nova IPTV
+- Версия: 1.0.1 (код на версията: 2)
+- Пакет: `bg.novatv.app`
+- Минимална версия: Android 6.0 (API 23)
+- Целева версия: Android 15 (API 35)
+- Интерфейс за телефони и Android TV според AndroidManifest.xml.
+- Декларирани разрешения: интернет и достъп до състоянието на мрежата.
 
-## Resources Visible in APK
-The APK contains the following resource types:
-- App icon and launcher icon
-- TV banners and channel artwork
-- Control icons (play, pause, stop, skip, rewind, fast-forward)
-- Subtitle options (on/off)
-- Speed control, settings, and repeat/shuffle controls
-- Audio track selection
-- Fullscreen mode controls
+## Съдържание
 
-## Package Name
-The package name was extracted from the AndroidManifest.xml as part of the reverse engineering process. (Full package name analysis performed using APK parsing tools.)
+- `Nova-IPTV.apk` — оригиналният инсталационен файл.
+- `decompiled/sources/bg/novatv/app/` — възстановеният код на приложението.
+- `decompiled/sources/` — целият извлечен Java код, включително библиотеките.
+- `decompiled/resources/` — декодиран AndroidManifest.xml и ресурсите.
+- `ANALYSIS.md` — произход, метод и ограничения на извличането.
+- В секцията Releases е наличен APK за изтегляне.
 
-## Reverse Engineering Approach
-This analysis used:
-1. APK zip structure parsing to locate AndroidManifest.xml
-2. UTF-16BE decoding of the manifest binary
-3. Extraction of activity names, intent filters, and permissions
-4. Resource analysis to understand the app's UI structure
+## Функции, видими в извлечения код
 
-## Further Analysis Possible
-- Decompiling smali code for smali-level analysis
-- Extracting and analyzing classes.dex for smali code
-- Analyzing native libraries (.so files) if present
-- Reverse engineering the app's server communication protocols
-- Building a detailed feature map from the UI resources
+Кодът съдържа компоненти за IPTV плейлисти M3U, програмна схема EPG, профили, кеширане, възпроизвеждане и връзка с IPTV услуги. Това описание е от статичен преглед; приложението не е стартирано и работата на услугите не е проверявана.
 
-## Usage
-This repository is for educational and reverse engineering research purposes only. The original APK remains the property of its creators.
+## Инсталиране
+
+Изтеглете `Nova-IPTV.apk` от файловете или от Releases и го отворете на Android устройство. При необходимост разрешете инсталиране от избрания източник.
+
+## Статус на кода
+
+Това е **декомпилиран код**, а не оригиналният проект. Извличането е направено с JADX 1.5.6. Инструментът отчете 16 грешки; възможни са непълно възстановени методи. Няма възстановена и проверена конфигурация за компилиране, нито гаранция за повторно изграждане на същия APK. Оригиналните имена, коментари и структура може да липсват.
+
+Не е добавян нов лиценз за оригиналното приложение или включените библиотеки. Съществуващите права и лицензи на техните автори се запазват.
